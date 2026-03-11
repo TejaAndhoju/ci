@@ -16,6 +16,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
+          
+      - name: Run Tests
+        run: pytest
 
       - name: Install Dependencies
         run: pip install -r requirements.txt
@@ -24,5 +27,4 @@ jobs:
         run: docker build -t ml-ci-app .
 
 
-      - name: Run Tests
-        run: pytest
+      
