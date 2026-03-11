@@ -27,3 +27,9 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t ml-ci-app .
+
+      - name: Run Docker Container
+        run: docker run ml-ci-app
+      
+      - name: Deploy Container
+        run: docker run ml-ci-app
