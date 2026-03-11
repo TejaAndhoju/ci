@@ -15,16 +15,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: "3.9"
 
       - name: Install Dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run Tests
-        run: pytest path/to/your/tests
+        run: pytest -v
 
       - name: Build Docker Image
         run: docker build -t ml-ci-app .
-      
