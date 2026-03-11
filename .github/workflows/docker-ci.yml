@@ -22,3 +22,7 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t ml-ci-app .
+
+
+      - name: Run Tests
+        run: pytest
